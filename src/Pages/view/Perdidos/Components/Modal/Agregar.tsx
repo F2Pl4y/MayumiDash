@@ -34,6 +34,12 @@ export default function Agregar({ setOpenModal, getPerdidos }: props) {
   const [mssg, setMssg] = React.useState("")
   const [severity, setSeverity] = React.useState<any>("success")
   // 👆 ===================================== 👆
+
+  // AGREGA ESTO PARA QUE TUS INPUTS FUNCIONEN:
+    const [nombre, setNombre] = React.useState("");
+    const [edad, setEdad] = React.useState("");
+    const [descripcion, setDescripcion] = React.useState("");
+    const [file, setFile] = React.useState<any>(null);
   // form
   const [amoSelect, setAmoSelect] = React.useState<any>("")
   const [genero, setGenero] = React.useState<any>("")
@@ -146,7 +152,7 @@ export default function Agregar({ setOpenModal, getPerdidos }: props) {
               variant="outlined"
               fullWidth
               size="small"
-              //onChange={(e) => setNombre(e.target.value)}
+              onChange={(e) => setNombre(e.target.value)}
             />
           </Grid>
           <Grid item xs={12} md={12} sx={{ marginTop: "10px" }}>
@@ -157,7 +163,7 @@ export default function Agregar({ setOpenModal, getPerdidos }: props) {
               type="number"
               fullWidth
               size="small"
-              //onChange={(e) => setNombre(e.target.value)}
+              onChange={(e) => setNombre(e.target.value)}
             />
           </Grid>
           <Grid container spacing={2} sx={{ marginTop: "5px" }}>
